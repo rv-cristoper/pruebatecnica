@@ -1,4 +1,4 @@
-# Prueba tecnica
+# Prueba técnica
 ## Hosting - VERCEL
 Hosteado en --> https://pruebatecnica-pi.vercel.app/
 

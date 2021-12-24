@@ -2,12 +2,6 @@
 ## Hosting - VERCEL
 Hosteado en --> https://pruebatecnica-pi.vercel.app/
 
- [HOME] --> home page
- 
- [LOGIN] --> login page
- 
- [REGISTER] --> register page
-
 ## Para iniciar el proyecto
 
 Clona el repositorio 
@@ -38,8 +32,4 @@ npm run build
 
 -CHAKRA UI
 
-  [HOME]: https://pruebatecnica-pi.vercel.app/
 
-  [LOGIN]: https://pruebatecnica-pi.vercel.app/signin
-
-  [REGISTER]: https://pruebatecnica-pi.vercel.app/signup

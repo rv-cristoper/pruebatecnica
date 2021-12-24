@@ -37,3 +37,5 @@ npm run build
 -WEBPACK
 
 -CHAKRA UI
+
+  [HOME]: https://pruebatecnica-pi.vercel.app/

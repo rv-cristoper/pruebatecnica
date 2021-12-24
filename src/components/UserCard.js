@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   Avatar,
@@ -13,12 +13,14 @@ import {
 
 export const UserCard = () => {
   const primary400 = useToken("colors", ["primary.400"]);
+  const [active, setActive] = useState(true);
   const boxStyles = {
     border: `1px solid ${primary400}`,
     borderRadius: "20px",
     padding: "1em",
     width: "300px",
     margin: "auto",
+    opacity: active ? 1 : 0.3,
   };
   return (
     <Box sx={boxStyles}>
@@ -30,7 +32,11 @@ export const UserCard = () => {
           <FormLabel htmlFor="email-alerts" mb="0">
             Active
           </FormLabel>
-          <Switch id="email-alerts" />
+          <Switch
+            id="email-alerts"
+            isChecked={active}
+            onChange={() => setActive(!active)}
+          />
         </FormControl>
       </HStack>
       <Text fontWeight="bold" my=".5em">

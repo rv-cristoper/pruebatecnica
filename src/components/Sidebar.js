@@ -23,7 +23,7 @@ export const Sidebar = () => {
     color: "primary.300",
     padding: "1em",
     textAlign: "center",
-    pt: "8em",
+    pt: "5em",
     height: "30vh",
   };
   return (

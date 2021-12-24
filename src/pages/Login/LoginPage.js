@@ -2,20 +2,14 @@ import React from "react";
 import { Button, Text, VStack } from "@chakra-ui/react";
 import { Link, useHistory } from "react-router-dom";
 import { CustomInput } from "../../components/Input";
+import { vstackStyles } from "./styles";
 
 export default function LoginPage() {
   const ht = useHistory();
   const handleSignin = () => {
     ht.push("/");
   };
-  const vstackStyles = {
-    maxWidth: "500px",
-    margin: "auto",
-    height: "80vh",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "primary.300",
-  };
+
   return (
     <VStack sx={vstackStyles}>
       <Text fontSize="4xl" fontWeight="bold">

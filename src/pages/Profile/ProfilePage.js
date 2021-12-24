@@ -1,28 +1,9 @@
 import React from "react";
-import {
-  Avatar,
-  Box,
-  Button,
-  Divider,
-  HStack,
-  Text,
-  VStack,
-  Switch,
-  FormControl,
-  FormLabel,
-} from "@chakra-ui/react";
+import { Avatar, Box, HStack, Text, VStack } from "@chakra-ui/react";
 import { CustomInput } from "../../components/Input";
+import { vstackStyles } from "./styles";
 
 export default function ProfilePage() {
-  const vstackStyles = {
-    // maxWidth: "1000px",
-    // width: "90%",
-    // margin: "2em auto",
-    // height: "80vh",
-    alignItems: "flex-start",
-    justifyContent: "flex-start",
-    color: "primary.300",
-  };
   return (
     <VStack sx={vstackStyles}>
       <Text fontSize="4xl" fontWeight="bold" mb="1em">

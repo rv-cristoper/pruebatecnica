@@ -18,6 +18,16 @@ export const DrawerMenu = ({ isOpen, onClose, btnRef }) => {
     justifyContent: "flex-start",
     alignItems: "flex-start",
   };
+  const contentStyles = {
+    a: {
+      transition: "450ms all",
+      fontSize: "xl",
+      margin: "1em 0",
+      ":hover": {
+        opacity: 0.5,
+      },
+    },
+  };
   return (
     <>
       <Drawer
@@ -27,7 +37,7 @@ export const DrawerMenu = ({ isOpen, onClose, btnRef }) => {
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
-        <DrawerContent>
+        <DrawerContent sx={contentStyles}>
           <DrawerCloseButton />
           <DrawerBody textAlign="center" marginTop={14}>
             <Avatar w={10} h={10} />

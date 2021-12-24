@@ -1,12 +1,24 @@
-import React, { useRef } from "react";
-import { useDisclosure, Box, Avatar, Select, HStack } from "@chakra-ui/react";
+import React, { useRef, useState } from "react";
+import {
+  useDisclosure,
+  Box,
+  Avatar,
+  Select,
+  HStack,
+  Menu,
+  MenuButton,
+  Button,
+  MenuList,
+  MenuItem,
+} from "@chakra-ui/react";
 import { DrawerMenu } from "./DrawerMenu";
-import { HamburgerIcon } from "@chakra-ui/icons";
-import { Link } from "react-router-dom";
+import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { useHistory } from "react-router-dom";
 
 export const CustomHeader = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
+  const ht = useHistory();
   const hstackStyles = {
     justifyContent: { base: "space-between", md: "flex-end" },
     maxWidth: "1400px",
@@ -30,14 +42,23 @@ export const CustomHeader = () => {
         <HamburgerIcon onClick={onOpen} ref={btnRef} sx={hamburguerStyles} />
         <Box sx={optionsStyles}>
           <Avatar w={8} h={8} mr="1em" />
-          <Select placeholder="Admin" border={"none"}>
-            <option value="" key="">
-              Settings
-            </option>
-            <option value="" key="">
-              Sign out
-            </option>
-          </Select>
+          <Menu>
+            {({ isOpen }) => (
+              <>
+                <MenuButton isActive={isOpen}>
+                  fernandoelialtamirano@gmail.com
+                  <ChevronDownIcon color="primary.300" ml={4} />
+                </MenuButton>
+                <MenuList>
+                  <MenuItem onClick={() => ht.push("/profile")}>
+                    Profile
+                  </MenuItem>
+                  <MenuItem onClick={() => ht.push("/")}>Settings</MenuItem>
+                  <MenuItem onClick={() => ht.push("/signin")}>Logout</MenuItem>
+                </MenuList>
+              </>
+            )}
+          </Menu>
         </Box>
       </HStack>
       <DrawerMenu isOpen={isOpen} onClose={onClose} btnRef={btnRef} />

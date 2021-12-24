@@ -16,13 +16,15 @@ export const CustomLayout = ({ children }) => {
     background: "primary.400",
     maxWidth: "300px",
     shadow: "2xl",
+    position: "fixed",
+    width: { base: "0", md: "300px" },
   };
   const rightStyles = {
+    paddingLeft: { base: 0, md: "350px" },
     flex: ".8",
     height: "100%",
     maxW: "container.xl",
     margin: "auto",
-    marginLeft: "300px",
   };
   const hstackStyles = {
     height: "100%",

@@ -9,31 +9,8 @@ import {
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 import { UserCard } from "../../components/UserCard";
+import { boxStyles, hstackStyles } from "./styles";
 export default function Page() {
-  const boxStyles = {
-    maxWidth: "1000px",
-    width: "90%",
-    margin: "2em auto",
-    height: "80vh",
-  };
-  const hstackStyles = {
-    flexWrap: "wrap",
-    justifyContent: "space-evenly",
-    gap: "1em",
-    marginTop: "4em",
-    height: "70vh",
-    overflow: "auto",
-    width: "100%",
-    "::-webkit-scrollbar": {
-      backgroundColor: "white",
-      width: "5px",
-      borderRadius: "9px",
-    },
-    "::-webkit-scrollbar-thumb": {
-      backgroundColor: "#B7BDCB",
-      height: "20px",
-    },
-  };
   return (
     <Box sx={boxStyles}>
       <InputGroup>

@@ -1,17 +1,10 @@
 import React from "react";
-import { Button, HStack, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, HStack, Text, VStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { CustomInput } from "../../components/Input";
+import { vstackStyles } from "../Profile/styles";
 
 export default function RegisterPage() {
-  const vstackStyles = {
-    maxWidth: "500px",
-    margin: "auto",
-    height: "80vh",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "primary.300",
-  };
   return (
     <VStack sx={vstackStyles}>
       <Text fontSize="4xl" fontWeight="bold">

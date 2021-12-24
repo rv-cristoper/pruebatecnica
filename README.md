@@ -1,8 +1,11 @@
 # Prueba tecnica
 ## Hosting - VERCEL
 Hosteado en --> https://pruebatecnica-pi.vercel.app/
+
  -[HOME] --> home page
+ 
  -[LOGIN] --> login page
+ 
  -[REGISTER] --> register page
 
 ## Para iniciar el proyecto
@@ -24,8 +27,13 @@ Compila el proyecto
 npm run build
 ```
 ## Tecnologias
+
 -HTML
--JS
+
+-JAVASCRIPT
+
 -REACT
+
 -WEBPACK
+
 -CHAKRA UI

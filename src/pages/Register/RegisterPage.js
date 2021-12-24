@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Button, HStack, Text, VStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { CustomInput } from "../../components/Input";
-import { vstackStyles } from "../Profile/styles";
+import { vstackStyles } from "./styles";
 
 export default function RegisterPage() {
   return (

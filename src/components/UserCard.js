@@ -33,6 +33,7 @@ export const UserCard = () => {
             Active
           </FormLabel>
           <Switch
+            colorScheme=""
             id="email-alerts"
             isChecked={active}
             onChange={() => setActive(!active)}

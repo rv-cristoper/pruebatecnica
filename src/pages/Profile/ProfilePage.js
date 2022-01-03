@@ -1,9 +1,23 @@
 import React from "react";
-import { Avatar, Box, HStack, Text, VStack } from "@chakra-ui/react";
+import {
+  Avatar,
+  Box,
+  Button,
+  Flex,
+  HStack,
+  Text,
+  useDisclosure,
+  VStack,
+} from "@chakra-ui/react";
 import { CustomInput } from "../../components/Input";
 import { vstackStyles } from "./styles";
+import { ModalComponent } from "../../components/Modal";
 
 export default function ProfilePage() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const handleUpdate = () => {
+    onOpen();
+  };
   return (
     <VStack sx={vstackStyles}>
       <Text fontSize="4xl" fontWeight="bold" mb="1em">
@@ -57,6 +71,17 @@ export default function ProfilePage() {
           value="23 de diciembre del 2021"
         />
       </HStack>
+      <Flex justifyContent="flex-end" width="100%">
+        <Button
+          width="30%"
+          margin="1em 0 0 0"
+          variant="default"
+          onClick={handleUpdate}
+        >
+          Update
+        </Button>
+      </Flex>
+      {isOpen && <ModalComponent isOpen={isOpen} onClose={onClose} />}
     </VStack>
   );
 }

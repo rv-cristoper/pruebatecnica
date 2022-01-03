@@ -9,6 +9,7 @@ const Button = {
     display: "block",
     width: "40%",
     border: "1px solid",
+    fontSize: "md",
   },
   // styles for different sizes ("sm", "md", "lg")
   sizes: {
@@ -36,9 +37,23 @@ const Button = {
       bg: "#21252b",
     },
     outline: {
-      borderColor: "primary.200",
-      bg: "white",
+      bg: "transparent",
       color: "primary.200",
+      _hover: {
+        bg: "primary.400",
+        borderColor: "black.300",
+        color: "black.300",
+      },
+    },
+    default: {
+      bg: "primary.400",
+      color: "white",
+      border: "1px solid transparent",
+      _hover: {
+        bg: "transparent",
+        borderColor: "primary.400",
+        color: "primary.400",
+      },
     },
   },
   // default values for `size` and `variant`
@@ -49,11 +64,12 @@ const Button = {
 };
 
 const colors = {
+  black: {
+    200: "#2D2D2D",
+    300: "#1B1B1B",
+  },
   primary: {
-    400: "#454eff",
-    300: "#1a365d",
-    200: "#153e75",
-    100: "#5d90e3",
+    400: "#FD7A22",
   },
 };
 
@@ -65,7 +81,7 @@ const styles = {
       height: "100vh",
       // overflow: "hidden",
       bg: "white",
-      color: "primary.300",
+      color: "black.300",
     },
   },
 };

@@ -34,7 +34,7 @@ export const CustomHeader = () => {
     w: 6,
     h: 6,
     cursor: "pointer",
-    color: "primary.300",
+    color: "black.300",
   };
   return (
     <>
@@ -47,7 +47,7 @@ export const CustomHeader = () => {
               <>
                 <MenuButton isActive={isOpen}>
                   fernandoelialtamirano@gmail.com
-                  <ChevronDownIcon color="primary.300" ml={4} />
+                  <ChevronDownIcon color="black.300" ml={4} />
                 </MenuButton>
                 <MenuList>
                   <MenuItem onClick={() => ht.push("/profile")}>

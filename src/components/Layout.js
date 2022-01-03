@@ -13,7 +13,7 @@ export const CustomLayout = ({ children }) => {
     display: { base: "none", md: "block" },
     flex: ".2",
     height: "100%",
-    background: "primary.400",
+    background: "black.200",
     maxWidth: "300px",
     shadow: "2xl",
     position: "fixed",

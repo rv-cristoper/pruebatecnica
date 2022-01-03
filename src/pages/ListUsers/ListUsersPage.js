@@ -21,8 +21,8 @@ export default function Page() {
         <Input type="search" placeholder="Search users" />
       </InputGroup>
       <HStack sx={hstackStyles}>
-        {[1, 2, 3, 4, 5].map(() => (
-          <Box width="300px">
+        {[1, 2, 3, 4, 5].map((val) => (
+          <Box key={val} width="300px">
             <UserCard />
           </Box>
         ))}

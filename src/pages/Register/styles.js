@@ -1,12 +1,21 @@
 export const vstackStyles = {
   maxWidth: "550px",
-  margin: "auto",
-  // height: "80vh",
+  margin: "4em auto 0 auto",
+  height: "80%",
   alignItems: "center",
   justifyContent: "center",
-  color: "primary.300",
-  shadow: "xl",
-  padding: "1.2em",
+  color: "black.300",
+  shadow: { base: "none", sm: "xl" },
+  padding: "1.2em 2em",
   borderRadius: "20px",
-  margin: "2em auto",
+};
+
+export const linktoregisterStyles = {
+  transition: "250ms all",
+  color: "black.300",
+  textDecoration: "underline",
+  textDecorationColor: "transparent",
+  _hover: {
+    textDecorationColor: "black.300",
+  },
 };

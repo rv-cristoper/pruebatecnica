@@ -49,10 +49,10 @@ export const CustomInput = ({
           variant="flushed"
           defaultValue={value}
           disabled={disabled}
-          {...rest}
           name={name}
           type={type}
           onChange={handleChange}
+          {...rest}
         />
         {Icon && (
           <InputRightElement

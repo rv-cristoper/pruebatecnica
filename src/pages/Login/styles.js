@@ -10,6 +10,7 @@ export const vstackStyles = {
   alignItems: "center",
   justifyContent: "center",
   color: "black.300",
+  flex: ".6",
 };
 
 export const linktoregisterStyles = {

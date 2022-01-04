@@ -28,6 +28,8 @@ export const DrawerMenu = ({ isOpen, onClose, btnRef }) => {
       },
     },
   };
+
+  const handleSignout = () => localStorage.removeItem("user");
   return (
     <>
       <Drawer
@@ -58,7 +60,9 @@ export const DrawerMenu = ({ isOpen, onClose, btnRef }) => {
           </DrawerBody>
 
           <DrawerFooter justifyContent="flex-start">
-            <Link to="/signin">Log Out</Link>
+            <Link onClick={handleSignout} to="/signin">
+              Log Out
+            </Link>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

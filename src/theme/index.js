@@ -59,7 +59,7 @@ const Button = {
   // default values for `size` and `variant`
   defaultProps: {
     size: "",
-    variant: "outline",
+    variant: "",
   },
 };
 

@@ -55,10 +55,10 @@ export const Sidebar = () => {
   };
 
   useEffect(() => {
-    console.log(history.location.pathname);
     setSelected(history.location.pathname);
   }, []);
   const handleClick = (val) => setSelected(val);
+  const handleSignout = () => localStorage.removeItem("user");
   return (
     <Box>
       <Box sx={headerStyles}>
@@ -100,7 +100,9 @@ export const Sidebar = () => {
             route="/list"
           />
         </Box>
-        <Link to="/signin">Log Out</Link>
+        <Link onClick={handleSignout} to="/signin">
+          Log Out
+        </Link>
       </VStack>
     </Box>
   );

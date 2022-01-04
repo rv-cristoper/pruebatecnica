@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Container, HStack } from "@chakra-ui/react";
 import { CustomHeader } from "./Header";
 import { Sidebar } from "./Sidebar";
+import { Redirect } from "react-router-dom";
 
 export const CustomLayout = ({ children }) => {
   const boxStyles = {
@@ -31,6 +32,8 @@ export const CustomLayout = ({ children }) => {
     alignItems: "center",
     justifyContent: { base: "center", md: "initial" },
   };
+  if (!localStorage.getItem("user")) return <Redirect to="/signin" />;
+
   return (
     <Box sx={boxStyles}>
       <HStack sx={hstackStyles}>

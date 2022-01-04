@@ -11,7 +11,13 @@ import {
 import { Link } from "react-router-dom";
 import { CustomInput } from "../../components/Input";
 import { vstackStyles, linktoregisterStyles } from "./styles";
-import { EmailIcon, PhoneIcon, LockIcon, CheckIcon } from "@chakra-ui/icons";
+import {
+  EmailIcon,
+  PhoneIcon,
+  ViewIcon,
+  ViewOffIcon,
+  CheckIcon,
+} from "@chakra-ui/icons";
 import { useHistory } from "react-router-dom";
 import usePassword from "../../hooks/usePassword";
 import { AuthLayout } from "../../components/AuthLayout";
@@ -100,7 +106,7 @@ export default function RegisterPage() {
               isRequired={true}
               disabled={false}
               value={data.password}
-              Icon={LockIcon}
+              Icon={showPassword ? ViewOffIcon : ViewIcon}
               handleChange={handleChange}
               helper="8 - 16 characters"
               type={showPassword ? "text" : "password"}

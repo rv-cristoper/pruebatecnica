@@ -45,6 +45,7 @@ export default function RegisterPage() {
     if (data.password !== data.confirm) {
       setLoading(false);
       setError("Passwords are not equals");
+      return;
     }
     localStorage.setItem(
       "user",

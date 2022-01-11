@@ -25,6 +25,7 @@ import { AuthLayout } from "../../components/AuthLayout";
 export default function RegisterPage() {
   const ht = useHistory();
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const [data, setData] = useState({
     name: "",
     lastname: "",
@@ -40,7 +41,11 @@ export default function RegisterPage() {
   const handleSubmit = (ev) => {
     ev.preventDefault();
     setLoading(true);
-    if (data.password !== data.confirm) return;
+    setError(null);
+    if (data.password !== data.confirm) {
+      setLoading(false);
+      setError("Passwords are not equals");
+    }
     localStorage.setItem(
       "user",
       JSON.stringify({
@@ -61,6 +66,7 @@ export default function RegisterPage() {
           <Text fontSize="4xl" color="black.200" fontWeight="bold">
             Sign up
           </Text>
+          {error && <Text color="red">{error}</Text>}
           <HStack width="100%" gap="2em">
             <CustomInput
               isRequired={true}

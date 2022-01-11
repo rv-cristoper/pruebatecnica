@@ -46,19 +46,20 @@ export default function RegisterPage() {
       setLoading(false);
       setError("Passwords are not equals");
       return;
+    } else {
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          email: data.email,
+          password: data.password,
+          active: false,
+        })
+      );
+      setTimeout(() => {
+        setLoading(false);
+        ht.push("/signin");
+      }, [2000]);
     }
-    localStorage.setItem(
-      "user",
-      JSON.stringify({
-        email: data.email,
-        password: data.password,
-        active: false,
-      })
-    );
-    setTimeout(() => {
-      setLoading(false);
-      setError(null) && ht.push("/signin");
-    }, [2000]);
   };
   return (
     <AuthLayout>

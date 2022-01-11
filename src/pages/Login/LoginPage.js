@@ -21,13 +21,12 @@ export default function LoginPage() {
     ev.preventDefault();
     if (data.email.length < 1 || data.password.length < 1)
       return setError("Email and password are required");
-    else setError(null);
     if (!localStorage.getItem("user"))
       return setError("Email or password are invalid");
-    setError(null);
     const localData = JSON.parse(localStorage.getItem("user"));
     if (data.email !== localData.email || data.password !== localData.password)
       return setError("Email or password are invalid");
+    else setError(null);
     setError(null);
     localStorage.setItem(
       "user",

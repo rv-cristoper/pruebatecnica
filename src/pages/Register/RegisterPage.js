@@ -57,7 +57,7 @@ export default function RegisterPage() {
     );
     setTimeout(() => {
       setLoading(false);
-      ht.push("/signin");
+      setError(null) && ht.push("/signin");
     }, [2000]);
   };
   return (

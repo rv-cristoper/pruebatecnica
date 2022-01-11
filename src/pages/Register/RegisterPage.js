@@ -46,13 +46,13 @@ export default function RegisterPage() {
       JSON.stringify({
         email: data.email,
         password: data.password,
+        active: false,
       })
     );
     setTimeout(() => {
       setLoading(false);
-      ht.push("/");
+      ht.push("/signin");
     }, [2000]);
-    console.log(data);
   };
   return (
     <AuthLayout>

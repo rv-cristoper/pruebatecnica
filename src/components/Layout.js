@@ -32,7 +32,8 @@ export const CustomLayout = ({ children }) => {
     alignItems: "center",
     justifyContent: { base: "center", md: "initial" },
   };
-  if (!localStorage.getItem("user")) return <Redirect to="/signin" />;
+  if (!localStorage.getItem("user") || !localStorage.getItem("user").active)
+    return <Redirect to="/signin" />;
 
   return (
     <Box sx={boxStyles}>

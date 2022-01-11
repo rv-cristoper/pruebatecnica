@@ -24,17 +24,20 @@ export default function LoginPage() {
     else setError(null);
     if (!localStorage.getItem("user"))
       return setError("Email or password are invalid");
-    else {
-      setError(null);
-      const localData = JSON.parse(localStorage.getItem("user"));
-      if (
-        data.email !== localData.email ||
-        data.password !== localData.password
-      )
-        return setError("Email or password are invalid");
-      setError(null);
-      ht.push("/");
-    }
+    setError(null);
+    const localData = JSON.parse(localStorage.getItem("user"));
+    if (data.email !== localData.email || data.password !== localData.password)
+      return setError("Email or password are invalid");
+    setError(null);
+    localStorage.setItem(
+      "user",
+      JSON.stringify({
+        email: data.email,
+        password: data.password,
+        active: true,
+      })
+    );
+    ht.push("/");
   };
 
   const handleChange = (ev) =>

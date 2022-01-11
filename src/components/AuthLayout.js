@@ -3,6 +3,9 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 import { Logo } from "./Logo";
 
 export const AuthLayout = ({ children }) => {
+  if (localStorage.getItem("user") && localStorage.getItem("user").active)
+    return <Redirect to="/" />;
+
   return (
     <Box>
       <Box position="absolute" top="20px" left="20px" width="200px">

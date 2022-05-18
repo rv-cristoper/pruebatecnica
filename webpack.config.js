@@ -18,13 +18,22 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
-        use: [{ loader: MiniCSSExtractPlugin.loader }, "css-loader"],
-      },
+        test: /\.(c|sc|sa)ss$/,
+        use: [
+          {
+            loader: MiniCSSExtractPlugin.loader
+          },
+          'css-loader',
+          'sass-loader'
+        ]
+      }
     ],
   },
   resolve: {
     extensions: ["*", ".js", ".jsx"],
+  },
+  stats: {
+    children: true
   },
   output: {
     path: path.resolve(__dirname, "./public"),
@@ -45,8 +54,6 @@ module.exports = {
       template: "./public/index.html",
       hash: true,
     }),
-    new MiniCSSExtractPlugin({
-      filename: "main.css",
-    }),
+    new MiniCSSExtractPlugin()
   ],
 };
